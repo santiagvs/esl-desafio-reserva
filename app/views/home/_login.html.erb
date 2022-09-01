@@ -1,0 +1,15 @@
+<% if user_signed_in? %>
+  <p>
+    <%= link_to "Sign out", destroy_user_session_path, 
+      method: :delete,
+      delete: { confirm: 'Do you want to log out?' },
+      class: 'btn btn-lg btn-danger'
+    %>
+  </p>
+<% else %>
+  <p>
+    <%= link_to "Log in", new_user_session_path, 
+      class: 'btn btn-lg btn-dark'
+    %>
+  </p>
+<% end %>
