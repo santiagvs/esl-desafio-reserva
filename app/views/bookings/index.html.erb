@@ -1,0 +1,22 @@
+<div class="container">
+  <h1 class='justify-content-center align-items-center'>Booking</h1>
+  <table class = "table table-striped">
+    <thead> 
+    <tr>
+      <th scope="col">Schedule</th>
+      <% business_days.each do |day| %>
+        <th scope="col"><%= day %></th>  
+      <% end %>
+    </tr>
+    </thead>
+
+    <tbody>
+      <% (6..23).to_a.each do |hour| %>
+        <tr>
+          <th scope="row"><%= "#{hour}:00" %></th>
+
+        </tr>
+      <% end %>
+    </tbody>
+  </table> 
+</div>
